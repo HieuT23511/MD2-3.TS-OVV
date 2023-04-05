@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Employee_1 = require("./Employee");
+var Manager_Employee_1 = require("./Manager-Employee");
+var employee1 = new Employee_1.Employee('Chu Trong Hieu', Employee_1.Gender.MALE, new Date("1995-03-14"), 'hieuct.work@gmail.com');
+var employee2 = new Employee_1.Employee('Chu Tron Hieu', Employee_1.Gender.FEMALE, new Date("1996-03-14"), 'hieuct1.work@gmail.com');
+var employee3 = new Employee_1.Employee('Chu Tro Hieu', Employee_1.Gender.OTHERS, new Date("1997-03-14"), 'hieuct2.work@gmail.com');
+var managerEpl = new Manager_Employee_1.ManagerEmployee;
+managerEpl.addEmployee(employee1);
+managerEpl.addEmployee(employee2);
+managerEpl.addEmployee(employee3);
+console.log(managerEpl.getInfo(employee1));
+managerEpl.deleteEmployee(employee1);
+managerEpl.showListEmployee();
