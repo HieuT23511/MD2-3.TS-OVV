@@ -11,7 +11,7 @@ var Employee = /** @class */ (function () {
     function Employee(name, gender, birthday, email, phoneNumber) {
         this.gender = Gender.OTHERS;
         this.name = name;
-        this.gender = Gender.OTHERS;
+        this.gender = gender;
         this.birthday = birthday;
         this.email = email;
         this.phoneNumber = phoneNumber;

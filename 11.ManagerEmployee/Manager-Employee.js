@@ -11,28 +11,36 @@ var ManagerEmployee = /** @class */ (function () {
     ManagerEmployee.prototype.addEmployee = function (newEpl) {
         this.ManagerEmployee.push(newEpl);
     };
-    ManagerEmployee.prototype.findEmployee = function (employee) {
-        var i = -1;
-        this.ManagerEmployee.forEach(function (employee1, index) {
-            if (employee1 == employee) {
-                i = index;
-            }
-        });
-        return i;
-    };
-    ManagerEmployee.prototype.deleteEmployee = function (deleteEpl) {
-        var indexEmployeeDelete = this.findEmployee(deleteEpl);
-        if (indexEmployeeDelete !== -1) {
-            this.ManagerEmployee.splice(indexEmployeeDelete, 1);
+    // findEmployee(employee: Employee) {
+    //     let i = -1;
+    //     this.ManagerEmployee.forEach(
+    //         (employee1, index) => {
+    //             if (employee1 == employee) {
+    //                 i = index;
+    //             }
+    //         }
+    //     )
+    //     return i;
+    // }
+    //
+    // deleteEmployee(deleteEpl: Employee) {
+    //     let indexEmployeeDelete = this.findEmployee(deleteEpl);
+    //     if(indexEmployeeDelete !== -1){
+    //         this.ManagerEmployee.splice(indexEmployeeDelete,1)
+    //     } else {
+    //         throw new Error(`This employee has existed`)
+    //     }
+    // }
+    ManagerEmployee.prototype.deleteEmployee = function (index) {
+        if (index >= 0 && index < this.ManagerEmployee.length) {
+            this.ManagerEmployee.splice(index, 1);
         }
         else {
-            throw new Error("This employee has existed");
+            throw new Error("Delete error. pls enter again index < list Employee");
         }
     };
     ManagerEmployee.prototype.showListEmployee = function () {
-        this.ManagerEmployee.forEach(function (employee) {
-            console.log(employee);
-        });
+        return this.ManagerEmployee;
     };
     return ManagerEmployee;
 }());

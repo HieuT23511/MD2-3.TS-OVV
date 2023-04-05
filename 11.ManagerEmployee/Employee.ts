@@ -13,7 +13,7 @@ export class Employee {
 
     constructor(name: string, gender: Gender, birthday: Date, email: string, phoneNumber ?: string) {
         this.name = name;
-        this.gender = Gender.OTHERS;
+        this.gender = gender;
         this.birthday = birthday;
         this.email = email;
         this.phoneNumber = phoneNumber;
