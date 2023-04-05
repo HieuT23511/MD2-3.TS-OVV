@@ -1,7 +1,7 @@
 enum Gender {
-    FEMALE,
-    MALE,
-    OTHERS
+    FEMALE ='Female',
+    MALE='Male',
+    OTHERS='Others'
 }
 
 class Employee {
